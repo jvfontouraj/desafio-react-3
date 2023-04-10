@@ -3,7 +3,7 @@ import {
   ProfileContent,
   ProfileHeader,
   ProfileInfo,
-} from './Profile.styles'
+} from './Profile.style'
 import ProfilePic from '../../../../assets/avatar.svg'
 import { ArrowSquareUpRight, Buildings, GithubLogo, User } from 'phosphor-react'
 
@@ -28,15 +28,15 @@ export function Profile() {
         </p>
         <ProfileInfo>
           <div>
-            <GithubLogo />
+            <GithubLogo size={16} color="#3A536B" weight="fill" />
             <span>cameronwll</span>
           </div>
           <div>
-            <Buildings />
+            <Buildings size={16} color="#3A536B" weight="fill" />
             <span>Rocketseat</span>
           </div>
           <div>
-            <User />
+            <User size={16} color="#3A536B" weight="fill" />
             <span>32 seguidores</span>
           </div>
         </ProfileInfo>
