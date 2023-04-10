@@ -1,7 +1,17 @@
+import { PostsContainer } from './Posts.style'
+
 export function Posts() {
   return (
-    <div>
-      <h1>Posts</h1>
-    </div>
+    <PostsContainer>
+      <div>
+        <h3>JavaScript data types and data structures</h3>
+        <span>Há 1 dia</span>
+      </div>
+      <p>
+        Programming languages all have built-in data structures, but these often
+        differ from one language to another. This article attempts to list the
+        built-in data structures available in{' '}
+      </p>
+    </PostsContainer>
   )
 }

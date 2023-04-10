@@ -14,3 +14,11 @@ export const BlogContentContainer = styled.div`
   flex-direction: column;
   max-width: 54rem;
 `
+
+export const PostsSection = styled.section`
+  margin-top: 3rem;
+  margin-bottom: 14rem;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+`

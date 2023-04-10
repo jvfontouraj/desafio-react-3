@@ -42,6 +42,12 @@ export const ProfileHeader = styled.header`
     text-transform: uppercase;
     color: ${(props) => props.theme.blue};
     font-weight: 700;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+  }
+
+  a:hover {
+    border-bottom: 1px solid ${(props) => props.theme.blue};
   }
 
   span {

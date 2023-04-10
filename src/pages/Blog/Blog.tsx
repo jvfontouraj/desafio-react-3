@@ -1,4 +1,4 @@
-import { BlogContainer, BlogContentContainer } from './Blog.style'
+import { BlogContainer, BlogContentContainer, PostsSection } from './Blog.style'
 import { NewPost } from './Components/NewPost/NewPost'
 import { Posts } from './Components/Posts/Posts'
 import { Profile } from './Components/Profile/Profile'
@@ -11,7 +11,14 @@ export function Blog() {
       <BlogContentContainer>
         <Profile />
         <NewPost />
-        <Posts />
+        <PostsSection>
+          <Posts />
+          <Posts />
+          <Posts />
+          <Posts />
+          <Posts />
+          <Posts />
+        </PostsSection>
       </BlogContentContainer>
     </BlogContainer>
   )

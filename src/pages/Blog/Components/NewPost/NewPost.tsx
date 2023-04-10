@@ -1,7 +1,13 @@
+import { NewPostContainer } from './NewPost.style'
+
 export function NewPost() {
   return (
-    <div>
-      <h1>New Post</h1>
-    </div>
+    <NewPostContainer>
+      <div>
+        <h4>Publicações</h4>
+        <span>6 publicações</span>
+      </div>
+      <input type="text" placeholder="Buscar conteúdo" />
+    </NewPostContainer>
   )
 }
