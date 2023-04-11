@@ -14,6 +14,7 @@ export const ProfileContainer = styled.div`
   img {
     width: 9.25rem;
     height: 9.25rem;
+    border-radius: 8px;
   }
 `
 export const ProfileContent = styled.div`

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const NewPostContainer = styled.div`
+export const SearchPostContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 4.5rem;

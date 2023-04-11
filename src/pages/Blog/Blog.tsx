@@ -1,5 +1,5 @@
 import { BlogContainer, BlogContentContainer, PostsSection } from './Blog.style'
-import { NewPost } from './Components/NewPost/NewPost'
+import { SearchPost } from './Components/SearchPost/SearchPost'
 import { Posts } from './Components/Posts/Posts'
 import { Profile } from './Components/Profile/Profile'
 import Cover from '../../assets/cover.svg'
@@ -10,7 +10,7 @@ export function Blog() {
       <img src={Cover} alt="" />
       <BlogContentContainer>
         <Profile />
-        <NewPost />
+        <SearchPost />
         <PostsSection>
           <Posts />
           <Posts />

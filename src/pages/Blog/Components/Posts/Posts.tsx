@@ -1,6 +1,10 @@
+import { UserContext } from '../../../../Contexts/Context'
 import { PostsContainer } from './Posts.style'
+import { useContext } from 'react'
 
 export function Posts() {
+  const { userData } = useContext(UserContext)
+
   return (
     <PostsContainer>
       <div>
@@ -10,7 +14,7 @@ export function Posts() {
       <p>
         Programming languages all have built-in data structures, but these often
         differ from one language to another. This article attempts to list the
-        built-in data structures available in{' '}
+        built-in data structures available in
       </p>
     </PostsContainer>
   )

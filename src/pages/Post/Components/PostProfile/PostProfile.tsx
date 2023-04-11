@@ -10,8 +10,12 @@ import {
   PostProfileHeader,
   PostProfileInfo,
 } from './PostProfile.style'
+import { useContext } from 'react'
+import { UserContext } from '../../../../Contexts/Context'
 
 export function PostProfile() {
+  const { userData } = useContext(UserContext)
+
   return (
     <PostProfileContainer>
       <PostProfileHeader>
@@ -23,7 +27,9 @@ export function PostProfile() {
         </div>
         <div>
           <span>
-            <a href="https://github.com">Ver no Github</a>
+            <a href={userData.html_url} target="blank">
+              Ver no Github
+            </a>
           </span>
           <ArrowSquareUpRight />
         </div>
@@ -32,7 +38,7 @@ export function PostProfile() {
       <PostProfileInfo>
         <div>
           <GithubLogo weight="fill" size={16} color="#3A536B" />
-          <span>cameronwll</span>
+          <span>{userData.login}</span>
         </div>
         <div>
           <CalendarBlank weight="fill" size={16} color="#3A536B" />
