@@ -13,11 +13,6 @@ export function Blog() {
         <SearchPost />
         <PostsSection>
           <Posts />
-          <Posts />
-          <Posts />
-          <Posts />
-          <Posts />
-          <Posts />
         </PostsSection>
       </BlogContentContainer>
     </BlogContainer>

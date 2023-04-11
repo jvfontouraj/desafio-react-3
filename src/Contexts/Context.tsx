@@ -1,13 +1,34 @@
 import React, { useEffect, useState } from 'react'
 
-interface UserContextType {
-  userData: any
-  setUserData: (userData: string) => void
-  searchInput: string
-  setSearchInput: (searchInput: string) => void
+export interface SearchDataTypes {
+  number: number
+  tittle: string
+  body: string
 }
 
-export const UserContext = React.createContext({} as UserContextType)
+export interface UserDataTypes {
+  login: string
+  html_url: string
+  avatar_url: string
+  name: string
+  bio: string
+  company: string
+  followers: number
+}
+
+interface UserContextType {
+  userData: UserDataTypes
+  searchInput: string
+  searchResult: SearchDataTypes[]
+  handleInputChange: (el: any) => void
+}
+
+export const UserContext = React.createContext({
+  userData: {} as UserDataTypes,
+  searchInput: '',
+  searchResult: [],
+  handleInputChange: () => {},
+} as UserContextType)
 
 interface UserContextProps {
   children: React.ReactNode
@@ -29,25 +50,29 @@ export function UserContextProvider({ children }: UserContextProps) {
       setUserData(jsonData)
     }
     loadUser(defaultUserName)
-  }, [])
+  }, [defaultUserName])
 
   useEffect(() => {
-    const searchIssue = async (searchInput: string) => {
+    const searchIssue = async (input: string) => {
       const response = await fetch(
-        `https://api.github.com/search/issues?q=user:${defaultUserName}%20${searchInput}`,
+        `https://api.github.com/search/issues?q=repo:jvfontouraj/desafio-react-3%20${input}`,
       )
       const jsonData = await response.json()
 
-      setSearchResult(jsonData)
+      setSearchResult(jsonData.items)
     }
     searchIssue(searchInput)
   }, [searchInput])
 
   console.log(searchResult)
 
+  function handleInputChange(el: any) {
+    setSearchInput(el)
+  }
+
   return (
     <UserContext.Provider
-      value={{ userData, setUserData, searchInput, setSearchInput }}
+      value={{ userData, searchResult, searchInput, handleInputChange }}
     >
       {children}
     </UserContext.Provider>

@@ -10,6 +10,7 @@ export const PostsContainer = styled.div`
   border-radius: 10px;
   border: 2px solid transparent;
   transition: all 0.3s;
+  overflow: hidden;
 
   :hover {
     border: 2px solid ${(props) => props.theme['base-label']};
