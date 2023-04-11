@@ -50,7 +50,7 @@ export function UserContextProvider({ children }: UserContextProps) {
       setUserData(jsonData)
     }
     loadUser(defaultUserName)
-  }, [defaultUserName])
+  }, [])
 
   useEffect(() => {
     const searchIssue = async (input: string) => {

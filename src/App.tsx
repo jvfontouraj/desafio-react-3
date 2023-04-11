@@ -7,13 +7,13 @@ import { UserContextProvider } from './Contexts/Context'
 
 export function App() {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <GlobalStyle />
-      <BrowserRouter>
-        <UserContextProvider>
+    <UserContextProvider>
+      <ThemeProvider theme={defaultTheme}>
+        <GlobalStyle />
+        <BrowserRouter>
           <Router />
-        </UserContextProvider>
-      </BrowserRouter>
-    </ThemeProvider>
+        </BrowserRouter>
+      </ThemeProvider>
+    </UserContextProvider>
   )
 }
